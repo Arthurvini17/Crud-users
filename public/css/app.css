@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #2F2F2F;
+    background-color: #26292E;
 }
 
 
@@ -42,9 +42,31 @@ aside {
     -webkit-box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
     -moz-box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
     box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
-    border: 1px solid black;
     height: 60vh;
-    padding: 1rem;
-    background-color: #1A1A1A;
+    padding: 16px;
+    background-color: #191919;
+    color: #19FF94;
     margin-top: 50px;
+    border-radius: 4px;
+    
+    
+}
+
+aside input{
+    background-color: #19FF94;
+}
+
+aside button{
+        background-color:#a200ff;
+        border-color: #a200ff;
+        padding: 5px;
+        color:#410066 ;
+        font-weight: bolder;
+        margin-top: 10px;
+    
+}
+
+aside .nav-create{
+    display: flex;
+   justify-content: flex-start;
 }

@@ -19,3 +19,4 @@ route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/create', [CrudController::class, 'create'])->name('user.create');
 
 
+
