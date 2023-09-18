@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>@yield('title', 'pagina principal')</title>
@@ -30,7 +31,7 @@
 
                     <li> <a href="#">Contato</a></li>
                     @auth
-                        ; <form action="{{ route('logout') }}" method="POST">
+                        <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <a href="{{ route('logout') }}"
                                 onclick="event.preventDefault(); this.closest('form').submit();">Sair</a>

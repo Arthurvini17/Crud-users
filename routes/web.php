@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CrudController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('/create', [CrudController::class, 'create'])->name('user.create');
 
 

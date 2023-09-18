@@ -1,46 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: 'Inter', sans-serif;
 }
+
 body {
-    background-color: #f2f2f2;
+    background-color: #2F2F2F;
 }
 
-header{
-    -webkit-box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
-    -moz-box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
-    width: 100%;
-
-}
-
-.nav-bar{
-   display: flex;
-   justify-content: space-between;
-   padding: 1.5rem 6rem;
-    
-}
-.nav-list {
-    align-items: flex-end;
-    justify-content: flex-end;
-    display: flex;
-}
-
-.nav-list ul {
-    display: flex;
-    justify-content: center;
-    list-style:none ;
-    gap: 10px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-
-}
 
 .table {
     border: 1px solid black;
@@ -50,9 +19,22 @@ header{
     text-align: center;
 }
 
-.table thead{
+.table a {
+    text-decoration: none;
+    color: black;
+
+
+}
+
+.table thead {
     display: flex;
-  
+
+}
+
+
+#crud {
+    margin-top: 100px;
+
 }
 
 aside {
@@ -61,10 +43,8 @@ aside {
     -moz-box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
     box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
     border: 1px solid black;
-   height: 60vh;
+    height: 60vh;
+    padding: 1rem;
+    background-color: #1A1A1A;
+    margin-top: 50px;
 }
-
-
-
-
-
