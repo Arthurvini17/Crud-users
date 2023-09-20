@@ -12,21 +12,27 @@
                         <th>Foto</th>
                         <th>Name</th>
                         <th>Date</th>
+                        <th>Email</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {{-- @foreach ($dados as $item) --}}
-                    <tr>
-                        {{-- <td><img src="{{ $item->foto }}" alt="Foto"></td> --}}
-                        {{-- <td>{{ $item->name }}</td> --}}
-                        {{-- <td>{{ $item->date }}</td> --}}
-                        <td>
-                            <a href="#">Editar</a>
-                            <a href="#">Excluir</a>
-                        </td>
-                    </tr>
-                    {{-- @endforeach --}}
+                    @foreach ($persons as $person)
+                        <tr>
+                            <td><img src="/img/persons/{{$person->image}}" alt=""></td>
+                            <td>{{ $person->first }}</td>
+                            <td>{{ \Carbon\Carbon::parse($person->date)->format('d/m/Y') }}</td>
+                            <td>{{$person->email}}</td>
+                            <td>
+                                <a href="#">Editar</a>
+                                <form action="{{route('users.destroy', ['person' => $person->id])}}" method="POST">
+                                    @csrf 
+                                    @method('DELETE')
+                                    <button type="submit">Excluir</button>
+                                </form>
+                               
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
@@ -37,7 +43,7 @@
                 <input type="search">
             </div>
             <nav class="nav-create">
-                <a href="{{route('user.create')}}">
+                <a href="{{ route('user.create') }}">
                     <button>Create user</button>
                 </a>
             </nav>

@@ -20,21 +20,22 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-
 }
 
-
+.errors {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
 
 .body-add {
     background-color: #19FF94;
-    
-    
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-   
-
 }
-.add-contact{
+
+.add-contact {
     color: #003d21;
 }
 
@@ -44,9 +45,12 @@ body {
     -moz-box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
     box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
     width: 600px;
-    height: 500px;
+    height: 540px;
     border-radius: 10px;
+}
 
+.alert-danger {
+    color: rgb(218, 0, 0);
 }
 
 form {
@@ -55,8 +59,11 @@ form {
     gap: 10px;
     color: #EFEDE0;
     padding: 30px;
+}
 
-
+form label {
+    align-items: flex-start;
+    display: flex;
 }
 
 .container-form .inputs {
@@ -65,7 +72,6 @@ form {
     border-radius: 4px;
     outline-color: #19FF94;
     border-color: #003d21;
-
 }
 
 .container-form .inputs::placeholder {
@@ -81,9 +87,16 @@ form {
     text-align: center;
 }
 
-.body-add button{
-    background-color:#a200ff;
+.body-add button {
+    background-color: #a200ff;
     border-color: #a200ff;
-   padding: 3px;
-   font-weight: bolder;
+    padding: 3px;
+    font-weight: bolder;
+}
+
+.button-submit {
+    background-color: #a200ff;
+    border-color: #a200ff;
+    font-weight: bolder;
+
 }

@@ -13,32 +13,45 @@ body {
 
 .table {
     border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    width: 80%;
+    padding: 20px;
+    margin-left: 30px;
+    -webkit-box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
+}
+
+.table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+   
+}
+
+.table td img{
+    width: 50px;
+    border-radius: 10px;
+}
+
+.table th {
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 10px;
+   
 }
 
 .table a {
     text-decoration: none;
     color: black;
-
-
+    margin-right: 10px;
 }
-
-.table thead {
-    display: flex;
-
-}
-
 
 #crud {
     margin-top: 100px;
-
 }
 
 aside {
-    float: right;
+    float:right;
     -webkit-box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
     -moz-box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
     box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.12);
@@ -46,27 +59,28 @@ aside {
     padding: 16px;
     background-color: #191919;
     color: #19FF94;
-    margin-top: 50px;
     border-radius: 4px;
+    position: fixed;
+    right: 0;
     
     
 }
 
-aside input{
+aside input {
     background-color: #19FF94;
 }
 
-aside button{
-        background-color:#a200ff;
-        border-color: #a200ff;
-        padding: 5px;
-        color:#410066 ;
-        font-weight: bolder;
-        margin-top: 10px;
-    
+aside button {
+    background-color: #a200ff;
+    border-color: #a200ff;
+    padding: 5px;
+    color: #410066;
+    font-weight: bolder;
+    margin-top: 10px;
+
 }
 
-aside .nav-create{
+aside .nav-create {
     display: flex;
-   justify-content: flex-start;
+    justify-content: flex-start;
 }
