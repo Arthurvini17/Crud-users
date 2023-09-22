@@ -12,8 +12,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-      $persons =  Person::all();
-        return view('home', ['persons' => $persons]);
+        $search = request('search');
+
+        if ($search) {
+            $persons = Person::where([
+                ['first', 'like', '%' . $search . '%'],
+            ])->get();
+        } else {
+            $persons = Person::all();
+        }
+ 
+        return view('home', ['persons' => $persons, 'search' => $search]);
     }
 
     /**

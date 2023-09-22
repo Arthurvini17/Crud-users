@@ -20,3 +20,4 @@ route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/create', [CrudController::class, 'create'])->name('user.create');
 Route::post('/users', [CrudController::class, 'store'])->name('users.store');
 Route::delete('/users{person}',[CrudController::class, 'destroy'])->name('users.destroy');
+Route::get('/users/{person}/edit', [CrudController::class, 'edit'])->name('users.edit');
