@@ -27,6 +27,7 @@ body {
    
 }
 
+
 .table td img{
     width: 50px;
     border-radius: 10px;
@@ -46,6 +47,38 @@ body {
     margin-right: 10px;
 }
 
+.button-group {
+    display: flex;
+}
+
+
+.button-group button {
+    flex: 0.5; 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+  
+
+.table .btn{
+    color: #191919;
+    background-color: #d10000;
+    border-color: #d10000;
+    padding: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.btn1{
+    background-color: #00BFFF;
+    border-color: #00BFFF;
+    padding: 5px;
+    font-weight: bolder;
+    cursor: pointer;
+    
+}
+
 #crud {
     margin-top: 100px;
 }
@@ -58,25 +91,34 @@ aside {
     height: 60vh;
     padding: 16px;
     background-color: #191919;
-    color: #19FF94;
+    color: #f2f2f2;
     border-radius: 4px;
-    position: fixed;
+    position: absolute;
     right: 0;
+    bottom: 0;
+    font-weight: bolder;
     
     
 }
 
 aside input {
-    background-color: #19FF94;
+    background-color: #f2f2f2;
+    border-radius: 3px;
+
 }
 
+aside input::placeholder{
+    font-weight: bolder;
+    
+}
 aside button {
-    background-color: #a200ff;
-    border-color: #a200ff;
+    background-color: #00BFFF;
+    border-color: #00BFFF;
     padding: 5px;
     color: #410066;
     font-weight: bolder;
     margin-top: 10px;
+    cursor: pointer;
 
 }
 

@@ -2,6 +2,7 @@
 
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/create.css') }}">
+    
     <script src="{{ asset('js/app.js') }}"></script>
 
 

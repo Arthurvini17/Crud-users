@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
@@ -18,7 +19,7 @@
         @livewireStyles
     </head>
     <body>
-        <div class="font-sans text-gray-900 antialiased">
+        <div class="font-sans text-red-900 antialiased">
             {{ $slot }}
         </div>
 

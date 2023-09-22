@@ -29,14 +29,10 @@ body {
     flex-direction: column;
 }
 
-.body-add {
-    background-color: #19FF94;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
+
 
 .add-contact {
-    color: #003d21;
+    color: #191919;
 }
 
 .container-form {
@@ -68,35 +64,39 @@ form label {
 
 .container-form .inputs {
     padding: 10px;
-    background-color: #19FF94;
+    background-color: #00ffff;
     border-radius: 4px;
-    outline-color: #19FF94;
-    border-color: #003d21;
+    outline-color: #00BFFF;
+    border-color: #00BFFF;
 }
 
 .container-form .inputs::placeholder {
-    color: #00B35F;
+    color: #00BFFF;
     font-weight: bolder;
 }
 
 .body-add {
+   
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     display: flex;
     justify-content: center;
     gap: 50%;
+    background-color: #148fb8;
     align-items: center;
     text-align: center;
 }
 
 .body-add button {
-    background-color: #a200ff;
-    border-color: #a200ff;
+    background-color: #00BFFF;;
+    border-color: #00BFFF;
     padding: 3px;
     font-weight: bolder;
 }
 
 .button-submit {
-    background-color: #a200ff;
-    border-color: #a200ff;
+    background-color: #00BFFF;
+    border-color: #00BFFF;
     font-weight: bolder;
 
 }

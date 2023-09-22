@@ -19,8 +19,7 @@ header {
     display: flex;
 }
 
-.nav-list a,
-li {
+.nav-list a, li {
     text-decoration: none;
     color: black;
     font-weight: bolder;
@@ -36,5 +35,4 @@ li {
 .logo {
     display: flex;
     align-items: center;
-
 }

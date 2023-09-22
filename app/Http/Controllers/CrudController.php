@@ -89,9 +89,44 @@ class CrudController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Person $person)
     {
-        //
+        $customMessages = [
+            'image.required' => 'Por favor, selecione uma imagem.',
+            'image.image' => 'O arquivo deve ser uma imagem válida.',
+            'image.mimes' => 'A imagem deve ser nos formatos: jpeg, png, jpg ou gif.',
+            'image.max' => 'A imagem não pode ser maior do que 2MB.',
+            'email.required' => 'This is not email valid.',
+            'first.required' => 'This field is mandatory.',
+            'last.required' => 'This field is mandatory.',
+            'date.required' => 'This field is mandatory',
+        ];
+
+
+        $validatedData = $request->validate([
+            'first' => 'required',
+            'last' => 'required',
+            'email' => 'required|email',
+            'date' => 'required|date',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:100048',
+        ], $customMessages);
+
+        $person->first = $validatedData['first'];
+        $person->last = $validatedData['last'];
+        $person->email = $validatedData['email'];
+        $person->date = $validatedData['date'];
+        
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            $requestImage = $request->image;
+            $extension = $requestImage->extension();
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now") . "." . $extension);
+            $requestImage->move(public_path('img/persons'), $imageName);
+            $person->image = $imageName;
+        }
+
+        $person->save();
+
+        return redirect()->route('home.index');
     }
 
     /**

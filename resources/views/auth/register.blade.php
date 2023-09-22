@@ -1,5 +1,6 @@
 <x-guest-layout>
     <x-authentication-card>
+        <link rel="stylesheet" href="{{ asset('css/register.css') }}">
         <x-slot name="logo">
             <x-authentication-card-logo />
         </x-slot>
@@ -9,6 +10,9 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
+            <div class="text">
+                <h1>Register Now</h1>
+            </div>
             <div>
                 <x-label for="name" value="{{ __('Name') }}" />
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
@@ -46,7 +50,7 @@
                 </div>
             @endif
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="link">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>

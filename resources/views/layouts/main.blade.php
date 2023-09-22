@@ -32,6 +32,7 @@
 
                     <li> <a href="#">Contato</a></li>
                     @auth
+                    <li>
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <a href="{{ route('logout') }}"

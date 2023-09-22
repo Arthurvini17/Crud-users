@@ -22,8 +22,9 @@
                 </div>
 
 
-                <form action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('users.update', ['person' => $person->id]) }}" method="POST" enctype="multipart/form-data">
                     @csrf
+                    @method('put')
                     <div class="errors">
                         @if ($errors->has('image'))
                             <div class="alert-danger">{{ $errors->first('image') }}</div>
@@ -31,7 +32,7 @@
                    
                     
                     <label for="file">Imagem do usuario</label>
-                    <input type="file" name="image">
+                    <input type="file" name="image" value="{{$person->image}}">
                 </div>
                 
                     <label for="name">First Name </label>

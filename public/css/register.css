@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #26292E;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+form {
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #a200ff;
+    border-radius: 3px;
+    gap: 10px;
+}
+
+form input {
+    border-radius: 5px;
+    background-color: #19FF94;
+    padding: 10px;
+}
+
+form label {
+    align-items: center;
+    justify-content: center;
+  
+    text-align: center;
+    display: flex
+}
+
+form input::placeholder{
+    color: #003d21;
+    font-weight: bolder;
+}
+
+.ml-4 {
+    background-color: #a200ff;
+    padding: 3px;
+    border-radius: 3px;
+    font-weight: bolder;
+    border-color: #a200ff;
+}
+
+.forgot {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+
+.link {
+    
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+
+.link a {
+    text-decoration: none;
+    font-weight: bolder;
+}
+.link a:hover{
+    color: black;
+
+}
